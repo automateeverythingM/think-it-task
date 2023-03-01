@@ -1,0 +1,30 @@
+.topNav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    border-bottom: 1px solid var(--lightest-gray);
+}
+
+.title {
+    font-weight: 600;
+    color: var(--dark-gray);
+    margin: 0;
+    font-size: 28px;
+    line-height: 1;
+}
+
+.userName {
+    font-size: 12px;
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+.userContainer{
+    display: flex;
+    align-items: center;
+}
+
+.userContainer svg{
+    color:#A0AEC0;
+}
