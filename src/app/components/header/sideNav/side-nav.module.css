@@ -1,0 +1,10 @@
+.sideNav {
+    padding: 30px 24px;
+    min-width: 250px;
+    border-right: 1px solid var(--lightest-gray);
+    height: 100%;
+}
+
+.aside {
+    height: 100%;
+}
