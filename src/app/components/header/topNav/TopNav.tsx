@@ -9,7 +9,7 @@ export const TopNav = ({}: ITopNavProps) => {
 
       <div className={styles.userContainer}>
         <span className={styles.userName}>Name</span>
-        <UserIcon />
+        <UserIcon width="40" height="40" />
       </div>
   </nav>;
 };
