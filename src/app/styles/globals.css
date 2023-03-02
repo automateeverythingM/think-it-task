@@ -9,11 +9,13 @@
 	--blue: #3754db;
 	--orange: #ffc092;
 	--lightest-gray: #f5f5f5;
+	--white: #fff;
 
 	--text-primary: var(--dark);
 	--text-secondary: var(--light-gray);
 	--text-active: var(--primary);
 	--text-blue: var(--blue);
+	--text-white: var(--white);
 
 	--background-light: var(--lightest-gray);
 
@@ -40,4 +42,5 @@ body {
 	font-family: "Montserrat", sans-serif;
 	font-size: 16px;
 	line-height: 1.5;
+	color: var(--text-primary);
 }
