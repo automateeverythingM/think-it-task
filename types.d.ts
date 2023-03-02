@@ -1,5 +1,5 @@
 type User = {
-    id: string;
+    id: number;
     name: string;
     username: string;
     email: string;
@@ -8,8 +8,8 @@ type User = {
 }
 
 type Post = {
-    userId: string;
-    id: string;
+    userId: number;
+    id: number;
     title: string;
     body: string;
 }
