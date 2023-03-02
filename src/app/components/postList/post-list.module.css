@@ -57,6 +57,11 @@
 
 .tableWrapper td h4 {
     margin: 0;
+    /* eclipse text */;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 250px;
 }
 
 .tableWrapper thead {
@@ -76,4 +81,11 @@
     width: 100%;
 }
 
+.noPostsWrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding-top: 80px;
+}
 
