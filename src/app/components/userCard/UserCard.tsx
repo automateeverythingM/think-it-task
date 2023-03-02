@@ -1,21 +1,29 @@
 import UserIcon from "src/assets/inline-icon/user.svg";
 import styles from "./user-card.module.css";
-interface IUserCardProps {}
+interface IUserCardProps {
+	user: User;
+	onUserSelect: (id: string) => void;
+}
 
-export const UserCard = ({}: IUserCardProps) => {
+export const UserCard = ({ user: { id, email, name, phone, username, website }, onUserSelect }: IUserCardProps) => {
 	return (
-		<div className={styles.cardWrapper}>
+		<button onClick={() => onUserSelect(id)} className={styles.cardWrapper}>
 			<div className={styles.iconWrapper}>
 				<UserIcon width="57" height="57" />
 			</div>
 
-			<div className={styles.titleName}>Name</div>
+			<div className={styles.titleName}>{name}</div>
 
 			<div className={styles.infoWrapper}>
-				<div>Username: ...</div>
-				<div>Email: ...</div>
-				<div>Phone: ...</div>
+				<div>Username: {username}</div>
+				<div>Email: {email}</div>
+				<div>Phone: {phone}</div>
+				<div>
+					<span>Website:</span> 
+					{" "}
+					<a href={`//${website}`}>{website}</a>
+				</div>
 			</div>
-		</div>
+		</button>
 	);
 };

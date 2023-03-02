@@ -1,11 +1,12 @@
 import UserIcon from "src/assets/inline-icon/user-line.svg";
 import { UserCard } from "src/app/components/userCard/UserCard";
 import styles from "./users-list.module.css";
-interface IUsersListProps {}
+interface IUsersListProps {
+	users: User[];
+	onUserSelect: (id: string) => void;
+}
 
-const users = Array.from({ length: 5 }, (_, i) => ({ id: i }));
-
-export const UsersList = ({}: IUsersListProps) => {
+export const UsersList = ({ users, onUserSelect }: IUsersListProps) => {
 	return (
 		<div>
 			<div className={styles.listTitleContainer}>
@@ -17,7 +18,7 @@ export const UsersList = ({}: IUsersListProps) => {
 
 			<div className={styles.listContainer}>
 				{users.map((user) => (
-					<UserCard key={user.id} />
+					<UserCard key={user.id} user={user} onUserSelect={onUserSelect} />
 				))}
 			</div>
 		</div>
