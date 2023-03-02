@@ -1,3 +1,4 @@
-.main-container {
-    display: flex;
+.pageWrapper {
+    background-color: var(--background-light);
+    padding: 34px 20px;
 }

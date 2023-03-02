@@ -1,7 +1,11 @@
-import styles from './page.module.css'
+import { UsersList } from "./components/usersList/usersList";
+import styles from "./styles/page.module.css";
+
 
 export default function Home() {
-  return (
-    <div>DashBoard</div>
-  )
+	return (
+		<div className={styles.pageWrapper}>
+			<UsersList />
+		</div>
+	);
 }

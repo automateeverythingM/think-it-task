@@ -1,0 +1,22 @@
+
+.listTitleContainer {
+    display: flex;
+    align-items: center;
+    color: var(--text-primary);
+}
+
+.listTitle {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+    margin-right: 10px;
+}
+
+.iconWrapper {
+    margin-top: 4px;
+}
+
+.listContainer {
+    display: flex;
+    
+}
