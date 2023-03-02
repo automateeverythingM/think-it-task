@@ -29,14 +29,16 @@ interface IAction {
 }
 
 export interface IState {
-	selectedUserId: string | null;
+	deletePostId: number | null;
+	showDeleteModal: boolean;
 	users: User[];
 	posts: Post[];
 	dispatch: React.Dispatch<IAction>;
 }
 
 export const initState = {
-	selectedUserId: null,
+	deletePostId: null,
+	showDeleteModal: false,
 	users: [],
 	posts: [],
 	dispatch: () => null,

@@ -1,5 +1,7 @@
+import Link from "next/link";
 import FileIcon from "src/assets/inline-icon/file.svg";
 import styles from "./post-list.module.css";
+import { PostTableItem } from "./PostTableItem";
 
 interface IPostListProps {
 	posts: Post[];
@@ -7,7 +9,6 @@ interface IPostListProps {
 }
 
 export const PostList = ({ posts, name }: IPostListProps) => {
-
 	if(!name) return (
 		<div className={styles.noPostsWrapper}>
 			<h4>Select a user to see their posts</h4>
@@ -37,17 +38,7 @@ export const PostList = ({ posts, name }: IPostListProps) => {
 					</thead>
 					<tbody>
 						{posts?.map(({ id, title }) => (
-							<tr key={id}>
-								<td>
-									<h4>{title}</h4>
-								</td>
-								<td>
-									<div className={styles.actionButtonsWrapper}>
-										<button className="btn btn-small btn-outline-blue">View</button>
-										<button className="btn btn-small btn-link-danger">Delete</button>
-									</div>
-								</td>
-							</tr>
+							<PostTableItem key={id} id={id} title={title} />
 						))}
 					</tbody>
 				</table>
