@@ -1,4 +1,3 @@
-import Link from "next/link";
 import FileIcon from "src/assets/inline-icon/file.svg";
 import styles from "./post-list.module.css";
 import { PostTableItem } from "./PostTableItem";
@@ -8,7 +7,7 @@ interface IPostListProps {
 	name: string | undefined;
 }
 
-export const PostList = ({ posts, name }: IPostListProps) => {
+export const PostList = ({ posts, name }: IPostListProps) => {;
 	if(!name) return (
 		<div className={styles.noPostsWrapper}>
 			<h4>Select a user to see their posts</h4>

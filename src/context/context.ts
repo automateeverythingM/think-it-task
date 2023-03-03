@@ -29,6 +29,7 @@ interface IAction {
 }
 
 export interface IState {
+	selectedUserId: number | null;
 	deletePostId: number | null;
 	showDeleteModal: boolean;
 	users: User[];
@@ -37,6 +38,7 @@ export interface IState {
 }
 
 export const initState = {
+	selectedUserId: null,
 	deletePostId: null,
 	showDeleteModal: false,
 	users: [],

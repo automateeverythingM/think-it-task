@@ -1,9 +1,10 @@
 import UserIcon from "src/assets/inline-icon/user-line.svg";
 import { UserCard } from "src/app/components/userCard/UserCard";
 import styles from "./users-list.module.css";
+import { useRouter } from "next/navigation";
 interface IUsersListProps {
 	users: User[];
-	onUserSelect: (id: string) => void;
+	onUserSelect: (id: number) => void;
 }
 
 export const UsersList = ({ users, onUserSelect }: IUsersListProps) => {

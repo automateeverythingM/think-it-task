@@ -2,7 +2,7 @@
 import { useRouter } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 import { useCtx } from "src/context/context";
-import { actionSetActiveUser, actionSetPosts, actionSetShowDeleteModal } from "src/context/reducer";
+import { actionSetActiveUser, actionSetPosts, actionSetSelectedUserId, actionSetShowDeleteModal } from "src/context/reducer";
 import { fetcher } from "src/helpers/fetcher";
 import { DeleteModal } from "./components/modal/deleteModal";
 import { Modal } from "./components/modal/modal";
@@ -41,7 +41,8 @@ export default function Home({ searchParams }: IHomeProps) {
 
 	const selectedUserName = useMemo(() => users.find((u) => u.id === userId)?.name, [users, userId]);
 
-	const onUserSelect = (id: string) => {
+	const onUserSelect = (id: number) => {
+		dispatch(actionSetSelectedUserId(id));
 		router.push(`/?id=${id}`);
 	};
 	return (

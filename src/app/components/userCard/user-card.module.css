@@ -41,3 +41,7 @@
 .infoWrapper > div {
 	text-align: left;
 }
+
+.selected {
+	opacity: 0.5;
+}

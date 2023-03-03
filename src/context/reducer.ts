@@ -1,5 +1,5 @@
 import { IState } from './context';
-export type actionTypes = "SET_USERS" | "SET_POSTS" | "SET_SELECTED_USER_ID" | "SET_SHOW_DELETE_MODAL" | "SET_DELETE_POST_ID";
+export type actionTypes = "SET_USERS" | "SET_POSTS" | "SET_SELECTED_USER_ID" | "SET_SHOW_DELETE_MODAL" | "SET_DELETE_POST_ID" |"SET_SELECTED_USER_ID";
 export const reducer = (state: IState, action: { type: actionTypes; payload: any }) => {
 	switch (action.type) {
 		case "SET_USERS":
@@ -35,6 +35,13 @@ export const actionSetUsers = (users: User[]) => {
 	return {
 		type: "SET_USERS" as actionTypes,
 		payload: users,
+	};
+};
+
+export const actionSetSelectedUserId = (id: number | null) => {
+	return {
+		type: "SET_SELECTED_USER_ID" as actionTypes,
+		payload: id,
 	};
 };
 
